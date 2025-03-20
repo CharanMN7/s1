@@ -28,7 +28,6 @@ const Page: React.FC = () => {
       try {
         const response = await fetch("/api/get-leads-info");
         const data = await response.json();
-        console.log("data: ", data);
         setLeads(data);
       } catch (error) {
         console.log("Error fetching leads info: ", error);
