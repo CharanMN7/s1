@@ -2,18 +2,22 @@ import { supabase } from "@/lib/supabaseCient";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  // fetch data from supbase, in the table called "s1-finishers" and return the json response
-  const { data, error } = await supabase.from("s1-finishers").select("*"); // select all columns
+  try {
+    const { data, error } = await supabase.from("s1-finishers").select("*");
 
-  if (error) {
-    console.error("Error fetching finishers:", error);
-    return NextResponse.json({
-      success: false,
-      error: "Failed to fetch finishers",
-    });
+    if (error) {
+      return NextResponse.json(
+        { error: "Failed to fetch finishers data" },
+        { status: 500 },
+      );
+    }
+
+    return NextResponse.json(data);
+  } catch (error) {
+    console.error("Error fetching finishers data:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
-
-  const finishers = data;
-
-  return NextResponse.json(finishers);
 }

@@ -2,17 +2,22 @@ import { supabase } from "@/lib/supabaseCient";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const { data, error } = await supabase.from("s1-leads-info").select("*");
+  try {
+    const { data, error } = await supabase.from("s1-leads-info").select("*");
 
-  if (error) {
+    if (error) {
+      return NextResponse.json(
+        { error: "Failed to fetch leads info" },
+        { status: 500 },
+      );
+    }
+
+    return NextResponse.json(data);
+  } catch (error) {
     console.error("Error fetching leads info:", error);
-    return NextResponse.json({
-      success: false,
-      error: "Failed to fetch leads info",
-    });
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 },
+    );
   }
-
-  const leadsInfo = data;
-
-  return NextResponse.json(leadsInfo);
 }
