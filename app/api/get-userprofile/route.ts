@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/supabaseCient";
+import { supabaseClient } from "@/lib/supabaseCient";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
@@ -15,8 +15,8 @@ export async function GET(req: NextRequest) {
     }
 
     // Get user profile data
-    const { data, error } = await supabase
-      .from("profiles")
+    const { data, error } = await supabaseClient
+      .from("s1-finishers")
       .select("*")
       .eq("username", username)
       .single();

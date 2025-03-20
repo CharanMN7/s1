@@ -1,9 +1,11 @@
-import { supabase } from "@/lib/supabaseCient";
+import { supabaseClient } from "@/lib/supabaseCient";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const { data, error } = await supabase.from("s1-leads-info").select("*");
+    const { data, error } = await supabaseClient
+      .from("s1-leads-info")
+      .select("*");
 
     if (error) {
       return NextResponse.json(
