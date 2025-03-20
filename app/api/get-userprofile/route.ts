@@ -34,6 +34,7 @@ export async function GET(req: NextRequest) {
       email: undefined,
       phone: undefined,
       address: undefined,
+      gender: undefined,
     };
 
     return NextResponse.json(sanitizedData);

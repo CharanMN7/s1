@@ -14,7 +14,13 @@ export async function GET() {
       );
     }
 
-    return NextResponse.json(data);
+    // Remove gender information from all records
+    const sanitizedData = data.map((record) => ({
+      ...record,
+      gender: undefined,
+    }));
+
+    return NextResponse.json(sanitizedData);
   } catch (error) {
     console.error("Error fetching finishers data:", error);
     return NextResponse.json(
