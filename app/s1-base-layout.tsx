@@ -5,11 +5,11 @@ const S1BaseLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <header className="w-full sticky top-0 flex justify-between items-center px-4 py-4 border-b border-dashed bg-background/50 backdrop-blur z-[99]">
-        <Link href="/s1">
+        <Link href="/">
           <h1 className="font-semibold text-3xl">devsForFun</h1>
         </Link>
         <Button variant="outline" className="rounded-full">
-          <Link href="/s1/about">about</Link>
+          <Link href="/about">about</Link>
         </Button>
       </header>
 

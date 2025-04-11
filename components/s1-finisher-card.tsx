@@ -27,7 +27,7 @@ const S1FinisherCard = ({
         <span className="text-xl overflow-hidden whitespace-nowrap text-ellipsis block mb-2 max-w-[150px]">
           {name}
         </span>
-        <Link href={`/s1/hall-of-fame/${username}`}>
+        <Link href={`/hall-of-fame/${username}`}>
           <Badge className={`rounded-full hover:bg-${vibe}`}>
             View Profile
           </Badge>
