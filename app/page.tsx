@@ -200,10 +200,10 @@ const Page: React.FC = () => {
       <div className="text-center bg-[url('/whathappensnext.png')] bg-no-repeat bg-cover bg-bottom ">
         <div className="py-20 backdrop-brightness-25">
           <h2 className="text-4xl font-extrabold md:text-6xl">
-            what happens next?
+            what happened to devsForFun?
           </h2>
-          <p className="text-muted-foreground mt-6 md:text-2xl">
-            stick with us, we&apos;ll tell you soon...
+          <p className="text-foreground mt-6 md:text-2xl">
+            <a href="https://devsforfun.com" className="font-bold">devsForFun</a> is now a company!
           </p>
         </div>
       </div>

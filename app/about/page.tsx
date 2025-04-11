@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import LeadsInfo from "./about-component";
-import EmeralSpark from "../../../public/emraldspark.png";
-import Goldlight from "../../../public/goldlight.png";
-import Moonwind from "../../../public/moonwind.png";
-import ScarletNova from "../../../public/scarletnova.png";
+import EmeralSpark from "@/public/emraldspark.png";
+import Goldlight from "@/public/goldlight.png";
+import Moonwind from "@/public/moonwind.png";
+import ScarletNova from "@/public/scarletnova.png";
 import LoadingSpinner from "@/components/ui/loading-spinner";
 import { Button } from "@/components/ui/button";
 import S1BaseLayout from "../s1-base-layout";

@@ -6,7 +6,7 @@ const S1BaseLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <header className="w-full sticky top-0 flex justify-between items-center px-4 py-4 border-b border-dashed bg-background/50 backdrop-blur z-[99]">
         <Link href="/">
-          <h1 className="font-semibold text-3xl">devsForFun</h1>
+          <h1 className="font-semibold text-3xl">devsForFun(s1)</h1>
         </Link>
         <Button variant="outline" className="rounded-full">
           <Link href="/about">about</Link>
@@ -17,7 +17,7 @@ const S1BaseLayout = ({ children }: { children: React.ReactNode }) => {
 
       <footer className="text-center text-xs pt-6 pb-4">
         <Button variant="link" asChild>
-          <Link href="/">devsForFun</Link>
+          <Link href="/" className="text-xl">s1</Link>
         </Button>
         <p className="text-muted-foreground pb-2">
           by
